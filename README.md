@@ -4,7 +4,7 @@ Requeriments:
 - Postman (https://www.postman.com/)
 
 Documentation:
-- Postman (https://documenter.getpostman.com/view/6339482/UyxdJoqS)
+- API GESTAO MEDICO SIMPLES (https://documenter.getpostman.com/view/6339482/UyxdJoqS)
 
 Run:
 Create network:

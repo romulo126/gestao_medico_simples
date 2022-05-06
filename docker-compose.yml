@@ -1,0 +1,72 @@
+version: "3"
+services:
+  php_8_gestao_de_cadastros_medicos:
+    build:
+      context: ./docker/php-8
+      dockerfile: Dockerfile
+    container_name: php_8_gestao_de_cadastros_medicos
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src/gestao:/var/www/html
+      - ./docker/php-8/env:/var/www/html/.env
+      - ./config/site-available/laravel.conf:/etc/apache2/sites-available/laravel.conf
+    restart: always
+    depends_on:
+      cadastros_medicos:
+        condition: service_healthy
+    links:
+      - cadastros_medicos:db
+    networks:
+      default:
+        ipv4_address: 10.253.252.92
+  cadastros_medicos:
+        build:
+            context: ./docker/mysql
+            dockerfile: Dockerfile
+        container_name: cadastros_medicos
+        ports: 
+            - "3307:3306"
+        healthcheck:
+          test: [ 'CMD', 'mysqladmin', 'ping', '-u', 'root', '--password=gestaoDeCadastrosMedicos123' ]
+          interval: 1m
+          timeout: 10s
+          retries: 5
+        
+        environment:
+            MYSQL_DATABASE: gestaoDeCadastrosMedicoss
+            MYSQL_USER: gestaoDeCadastrosMedicoss
+            MYSQL_PASSWORD: gestaoDeCadastrosMedicos123
+            MYSQL_ROOT_PASSWORD: gestaoDeCadastrosMedicos123 
+            MYSQL_ROOT_HOST: "%"
+            MYSQL_PORT: 3306
+            MYSQL_CHARSET: utf8
+        restart: always
+        networks:
+          default:
+            ipv4_address: 10.253.252.91
+
+  phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: phpmyadmin_gestaoDeCadastrosMedicos
+      depends_on:
+        cadastros_medicos:
+          condition: service_healthy
+      links: 
+          - cadastros_medicos:db
+      ports:
+          - 8001:80
+      environment:
+          MYSQL_USER: root
+          MYSQL_PASSWORD: gestaoDeCadastrosMedicos123
+          MYSQL_ROOT_PASSWORD: gestaoDeCadastrosMedicos123 
+          MYSQL_PORT: 3307
+          MYSQL_DATABASE: gestaoDeCadastrosMedicos
+          MYSQL_CHARSET: utf8
+      networks:
+        default:
+          ipv4_address: 10.253.252.90
+networks:
+  default:
+    external:
+      name: gestaoDeCadastrosMedicosNetworks

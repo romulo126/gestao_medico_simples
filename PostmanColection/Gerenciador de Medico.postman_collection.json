@@ -1,0 +1,1970 @@
+{
+	"info": {
+		"_postman_id": "b27cadc4-72df-4dad-9638-8b8c38552618",
+		"name": "Gerenciador de Medico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "medico",
+			"item": [
+				{
+					"name": "new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "exemplo de medico",
+									"type": "text"
+								},
+								{
+									"key": "crm",
+									"value": "127",
+									"type": "text"
+								},
+								{
+									"key": "telefoneFixo",
+									"value": "11948606060",
+									"type": "text"
+								},
+								{
+									"key": "telefoneCelular",
+									"value": "11948606060",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "01131010",
+									"type": "text"
+								},
+								{
+									"key": "especialidade[]",
+									"value": "Buco maxilo",
+									"type": "text"
+								},
+								{
+									"key": "especialidade[]",
+									"value": "Alergologia",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/api/medico/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"api",
+								"medico",
+								"new"
+							]
+						},
+						"description": "Cadastrar novo medico:\n--"
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "exemplo de medico",
+											"type": "text"
+										},
+										{
+											"key": "crm",
+											"value": "127",
+											"type": "text"
+										},
+										{
+											"key": "telefoneFixo",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "telefoneCelular",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "cep",
+											"value": "01131010",
+											"type": "text"
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Buco maxilo",
+											"type": "text"
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Alergologia",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"new"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:17:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:17:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Médico cadastrado com sucesso!\"\n}"
+						},
+						{
+							"name": "erro campo faltando",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "exemplo de medico",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "crm",
+											"value": "127",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telefoneFixo",
+											"value": "11948606060",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "telefoneCelular",
+											"value": "11948606060",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cep",
+											"value": "01131010",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Buco maxilo",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Alergologia",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"new"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:22:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:22:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"nome\": [\n            \"O campo nome é requerido\"\n        ],\n        \"crm\": [\n            \"O campo crm é requerido\"\n        ],\n        \"especialidade\": [\n            \"O campo especialidade é requerido\"\n        ],\n        \"telefoneFixo\": [\n            \"O campo telefoneFixo é requerido\"\n        ],\n        \"telefoneCelular\": [\n            \"O campo telefoneCelular é requerido\"\n        ],\n        \"cep\": [\n            \"O campo cep é requerido\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "erro cep errado",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "exemplo de medico",
+											"type": "text"
+										},
+										{
+											"key": "crm",
+											"value": "127",
+											"type": "text"
+										},
+										{
+											"key": "telefoneFixo",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "telefoneCelular",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "cep",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Buco maxilo",
+											"type": "text"
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Alergologia",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"new"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:25:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:25:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"cep\": [\n            \"CEP não encontrado\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "erro especialidade faltando",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "exemplo de medico",
+											"type": "text"
+										},
+										{
+											"key": "crm",
+											"value": "127",
+											"type": "text"
+										},
+										{
+											"key": "telefoneFixo",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "telefoneCelular",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "cep",
+											"value": "01131010",
+											"type": "text"
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Buco maxilo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"new"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:25:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:25:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"especialidade\": [\n            \"O campo especialidade deve ter no mínimo 2 itens\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "erro especialidade não cadastrada",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "exemplo de medico",
+											"type": "text"
+										},
+										{
+											"key": "crm",
+											"value": "127",
+											"type": "text"
+										},
+										{
+											"key": "telefoneFixo",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "telefoneCelular",
+											"value": "11948606060",
+											"type": "text"
+										},
+										{
+											"key": "cep",
+											"value": "01131010",
+											"type": "text"
+										},
+										{
+											"key": "especialidade[]",
+											"value": "Buco maxilo",
+											"type": "text"
+										},
+										{
+											"key": "especialidade[]",
+											"value": "dentista",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"new"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:26:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:26:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"especialidade\": [\n            \"Especialidade 'dentista' não encontrada\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/public/api/medico/show/nome/exemplo de medico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"api",
+								"medico",
+								"show",
+								"nome",
+								"exemplo de medico"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success por nome",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/show/nome/teste2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"show",
+										"nome",
+										"teste2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": [\n        {\n            \"id\": 2,\n            \"nome\": \"teste2\",\n            \"crm\": \"1234\",\n            \"telefoneFixo\": \"11948239658\",\n            \"telefoneCelular\": \"11948239658\",\n            \"cep\": {\n                \"cep\": \"01131-010\",\n                \"rua\": \"Rua Sérgio Tomás\",\n                \"bairro\": \"Bom Retiro\",\n                \"cidade\": \"São Paulo\",\n                \"complemento\": \"\",\n                \"uf\": \"SP\"\n            },\n            \"created_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"updated_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"especialidades\": [\n                \"Cardiologia infantil\",\n                \"Cirurgia cabeça e pescoço\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "success por cep",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/show/cep/01131010",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"show",
+										"cep",
+										"01131010"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": [\n        {\n            \"id\": 2,\n            \"nome\": \"teste2\",\n            \"crm\": \"1234\",\n            \"telefoneFixo\": \"11948239658\",\n            \"telefoneCelular\": \"11948239658\",\n            \"cep\": {\n                \"cep\": \"01131-010\",\n                \"rua\": \"Rua Sérgio Tomás\",\n                \"bairro\": \"Bom Retiro\",\n                \"cidade\": \"São Paulo\",\n                \"complemento\": \"\",\n                \"uf\": \"SP\"\n            },\n            \"created_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"updated_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"especialidades\": [\n                \"Cardiologia infantil\",\n                \"Cirurgia cabeça e pescoço\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "success por crm",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/show/crm/1234",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"show",
+										"crm",
+										"1234"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": [\n        {\n            \"id\": 2,\n            \"nome\": \"teste2\",\n            \"crm\": \"1234\",\n            \"telefoneFixo\": \"11948239658\",\n            \"telefoneCelular\": \"11948239658\",\n            \"cep\": {\n                \"cep\": \"01131-010\",\n                \"rua\": \"Rua Sérgio Tomás\",\n                \"bairro\": \"Bom Retiro\",\n                \"cidade\": \"São Paulo\",\n                \"complemento\": \"\",\n                \"uf\": \"SP\"\n            },\n            \"created_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"updated_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"especialidades\": [\n                \"Cardiologia infantil\",\n                \"Cirurgia cabeça e pescoço\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "success por telefone",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/show/telefone/11948239658",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"show",
+										"telefone",
+										"11948239658"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": [\n        {\n            \"id\": 2,\n            \"nome\": \"teste2\",\n            \"crm\": \"1234\",\n            \"telefoneFixo\": \"11948239658\",\n            \"telefoneCelular\": \"11948239658\",\n            \"cep\": {\n                \"cep\": \"01131-010\",\n                \"rua\": \"Rua Sérgio Tomás\",\n                \"bairro\": \"Bom Retiro\",\n                \"cidade\": \"São Paulo\",\n                \"complemento\": \"\",\n                \"uf\": \"SP\"\n            },\n            \"created_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"updated_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"especialidades\": [\n                \"Cardiologia infantil\",\n                \"Cirurgia cabeça e pescoço\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "success por telefone celunar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/show/telefone/11948239658",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"show",
+										"telefone",
+										"11948239658"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:34:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": [\n        {\n            \"id\": 2,\n            \"nome\": \"teste2\",\n            \"crm\": \"1234\",\n            \"telefoneFixo\": \"11948239658\",\n            \"telefoneCelular\": \"11948239658\",\n            \"cep\": {\n                \"cep\": \"01131-010\",\n                \"rua\": \"Rua Sérgio Tomás\",\n                \"bairro\": \"Bom Retiro\",\n                \"cidade\": \"São Paulo\",\n                \"complemento\": \"\",\n                \"uf\": \"SP\"\n            },\n            \"created_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"updated_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"especialidades\": [\n                \"Cardiologia infantil\",\n                \"Cirurgia cabeça e pescoço\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "sucess por especialidade",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/show/especialidade/Alergologia",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"show",
+										"especialidade",
+										"Alergologia"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:35:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:35:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": [\n        {\n            \"id\": 5,\n            \"nome\": \"teste9\",\n            \"crm\": \"127\",\n            \"telefoneFixo\": \"11948239660\",\n            \"telefoneCelular\": \"11948239660\",\n            \"cep\": {\n                \"cep\": \"03662-020\",\n                \"rua\": \"Rua Namé\",\n                \"bairro\": \"Vila Ré\",\n                \"cidade\": \"São Paulo\",\n                \"complemento\": \"\",\n                \"uf\": \"SP\"\n            },\n            \"created_at\": \"2022-05-05T23:17:31.000000Z\",\n            \"updated_at\": \"2022-05-05T23:17:31.000000Z\",\n            \"especialidades\": [\n                \"Alergologia\",\n                \"Buco maxilo\"\n            ]\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"teste2\",\n            \"crm\": \"1234\",\n            \"telefoneFixo\": \"11948239658\",\n            \"telefoneCelular\": \"11948239658\",\n            \"cep\": {\n                \"cep\": \"01131-010\",\n                \"rua\": \"Rua Sérgio Tomás\",\n                \"bairro\": \"Bom Retiro\",\n                \"cidade\": \"São Paulo\",\n                \"complemento\": \"\",\n                \"uf\": \"SP\"\n            },\n            \"created_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"updated_at\": \"2022-05-05T15:45:18.000000Z\",\n            \"especialidades\": [\n                \"Alergologia\",\n                \"Cardiologia infantil\"\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "erro",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/show/nome/Bs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"show",
+										"nome",
+										"Bs"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:29:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:29:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Nenhum médico encontrado!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"especialidade\":{\n        \"new\":[\"Cirurgia cardíaca\",\"Buco maxilo\"]\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/public/api/medico/update/especialidade/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"api",
+								"medico",
+								"update",
+								"especialidade",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success novas especialidades",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":{\n        \"new\":[\"Cirurgia cardíaca\",\"Buco maxilo\"]\n        }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/update/especialidade/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"update",
+										"especialidade",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:41:29 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:41:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Médico atualizado com sucesso!\"\n}"
+						},
+						{
+							"name": "success nova especialidade",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":{\n        \"new\":\"Cardiologia clínca\"\n        }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/update/especialidade/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"update",
+										"especialidade",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:45:24 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:45:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Médico atualizado com sucesso!\"\n}"
+						},
+						{
+							"name": "success update especialidade",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":{\n        \"Cardiologia clínca\":\"Cirurgia cabeça e pescoço\"\n        }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/update/especialidade/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"update",
+										"especialidade",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:46:44 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:46:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Médico atualizado com sucesso!\"\n}"
+						},
+						{
+							"name": "success apagar e colocar novas especialidade",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":[\n        \"Cirurgia cabeça e pescoço\",\n        \"Cirurgia cardíaca\"\n        ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/update/especialidade/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"update",
+										"especialidade",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:47:54 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:47:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Médico atualizado com sucesso!\"\n}"
+						},
+						{
+							"name": "error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":[\n        \"Cirurgia cabeça e pescoço\",\n        \"C\"\n        ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/update/especialidade/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"update",
+										"especialidade",
+										"3"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:48:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 05 May 2022 23:48:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"update\": [\n            \"A especialidade C Não Existe\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/public/api/medico/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"public",
+								"api",
+								"medico",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success apagar medico",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/delete/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"delete",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:22:35 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:22:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Médico removido com sucesso!\"\n}"
+						},
+						{
+							"name": "success apagar especialidade",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":\"Cardiologia infantil\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/delete/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:14:12 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:14:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Especialidade removida com sucesso!\"\n}"
+						},
+						{
+							"name": "success apagar multiplas especialidades",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":[\"Cirurgia cardíaca\",\"Buco maxilo\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/delete/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"delete",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:20:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:20:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Especialidade removida com sucesso!\"\n}"
+						},
+						{
+							"name": "Erro ao deletar especialidade",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"especialidade\":[\"w\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/delete/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"delete",
+										"3"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:17:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:17:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"A especialidade w para o id do medico informado não foi encontrado\"\n}"
+						},
+						{
+							"name": "erro ao deletar medico",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/public/api/medico/delete/32",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"public",
+										"api",
+										"medico",
+										"delete",
+										"32"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:20:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 06 May 2022 00:20:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Erro ao deletar verifique o id do médico\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Responsável pelas alterações nos dados do médico\n---"
+		}
+	]
+}
